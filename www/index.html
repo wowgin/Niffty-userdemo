@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <script src="components/loader.js"></script>
+      <link rel="stylesheet" href="components/loader.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/ncmb-latest.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/cssua.min.js"></script>
+    </head>
+    <body>
+    
+        <!-- 【ID / PW 認証】ログインページ -->
+        <div data-role="page" id="IDLoginPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+            </header>
+            <section data-role="content">
+                <h1>ID / PW ログイン</h1>
+                ID
+                <input type="text" id="login_username">
+                パスワード
+                <input type="password" id="IDLogin_password">
+                新規登録？
+                <a href="#IDRegisterPage" data-role="button" data-mini="true" data-inline="true" data-theme="b">登録</a>
+                <a href="#" id="IDLoginBtn" data-role="button" data-inline="false" data-theme="b">ログインする</a>
+            </section>
+            <div data-role="footer" data-position="fixed" data-theme="c">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-theme="d">ID / PW 認証</a></li>
+                        <li><a href="#emailLoginPage" data-theme="d">メール / PW 認証</a></li>
+                        <li><a href="#AnonymousLoginPage" data-theme="d">匿名認証</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+      <!-- 【ID / PW 認証】新規登録ページ -->
+        <div data-role="page" id="IDRegisterPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+            </header>
+            <section data-role="content">
+                <h1>ID / PW 新規登録</h1>
+                ID
+                <input type="text" id="reg_username">
+                パスワード
+                <input type="password" id="IDReg_password">
+                <a href="#" id="IDRegisterBtn" data-role="button" data-inline="false" data-theme="b">登録する</a>
+                <a href="#IDLoginPage" data-role="button" data-mini="true" data-inline="true" data-theme="b">戻る</a>
+            </section>
+            <div data-role="footer" data-position="fixed" data-theme="c">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#IDLoginPage" data-theme="d">ID / PW 認証</a></li>
+                        <li><a href="#emailLoginPage" data-theme="d">メール / PW 認証</a></li>
+                        <li><a href="#AnonymousLoginPage" data-theme="d">匿名認証</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      
+        <!-- 【メールアドレス / PW 認証】ログインページ -->
+        <div data-role="page" id="emailLoginPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+            </header>
+            <section data-role="content">
+                <h1>メールアドレス / PW ログイン</h1>
+                メールアドレス
+                <input type="text" id="login_mailAddress">
+                パスワード
+                <input type="password" id="emailLogin_password">
+                新規登録？
+                <a href="#emailRegisterPage" data-role="button" data-mini="true" data-inline="true" data-theme="b">登録</a>
+                <a href="#" id="emailLoginBtn" data-role="button" data-inline="false" data-theme="b">ログインする</a>
+            </section>
+            <div data-role="footer" data-position="fixed" data-theme="c">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#IDLoginPage" data-theme="d">ID / PW 認証</a></li>
+                        <li><a data-theme="d">メール / PW 認証</a></li>
+                        <li><a href="#AnonymousLoginPage" data-theme="d">匿名認証</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 【メールアドレス / PW 認証】新規登録ページ -->
+        <div data-role="page" id="emailRegisterPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+            </header>
+            <section data-role="content">
+                <h1>メールアドレス / PW 新規登録</h1>
+                メールアドレス
+                <input type="text" id="reg_mailAddress">
+                <a href="#yesNoDialog_mailAddress" data-rel="popup" data-position-to="window" data-role="button" data-inline="false" data-theme="b">登録する</a>
+                
+                <a href="#emailLoginPage" data-role="button" data-mini="true" data-inline="true" data-theme="b">戻る</a>
+            </section>
+            <!--Dialog box confirming mailAddress-->
+            <div data-role="popup" id="yesNoDialog_mailAddress" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+                <div data-role="header" data-theme="c" class="ui-corner-top" style="top: 0 !important;">
+                    <h1>確認</h1>
+                </div>
+                <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+                    <h3 class="ui-title"></h3>
+                    <p>会員登録用のメールを送信します。<br>よろしいですか？</p>
+                    <a href="#" id="YesBtn_mailAddress" data-role="button" data-inline="true" data-transition="flow" data-theme="b">はい</a>
+                    <a href="#" id="NoBtn_mailAddress" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">いいえ</a>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="c">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#IDLoginPage" data-theme="d">ID / PW 認証</a></li>
+                        <li><a href="#emailLoginPage" data-theme="d">メール / PW 認証</a></li>
+                        <li><a href="#AnonymousLoginPage" data-theme="d">匿名認証</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 【匿名認証】ログインページ -->
+        <div data-role="page" id="AnonymousLoginPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+            </header>
+            <section data-role="content">
+                <h1>匿名 ログイン</h1>
+                <a href="#" id="anonymousLoginBtn" data-role="button" data-inline="false" data-theme="b">ログインする</a>
+            </section>
+            <div data-role="footer" data-position="fixed" data-theme="c">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#IDLoginPage" data-theme="d">ID / PW 認証</a></li>
+                        <li><a href="#emailLoginPage" data-theme="d">メール / PW 認証</a></li>
+                        <li><a data-theme="d">匿名認証</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 詳細ページ -->
+        <div data-role="page" id="DetailPage">
+            <header data-role="header" data-position="fixed" data-theme="c">
+                <h1>会員デモ</h1>
+                <a href="#yesNoDialog_logout" class="ui-btn-left" data-rel="popup" data-position-to="window" data-role="button" data-inline="false" data-theme="d">ログアウト</a>
+            </header>
+            <section data-role="content">
+                <!--Detail show-->
+                <p><center>ようこそ！ログイン成功しました！</center></p>
+                <!--CurrentUserList-->
+                <center>
+                    <table data-role="listview" class="currentUserData" id="currentUserData" data-theme="xyz" style="width: 100%;"></table>
+                </center>
+                <!--Dialog box confirming logout-->
+                <div data-role="popup" id="yesNoDialog_logout" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+                    <div data-role="header" data-theme="c" class="ui-corner-top" style="top: 0 !important;">
+                        <h1>確認</h1>
+                    </div>
+                    <div align="middle" data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+                        <h3 class="ui-title"></h3>
+                        <p>ログアウトしてもよろしいですか？</p>
+                        <a href="#" id="YesBtn_logout" data-role="button" data-inline="true" data-transition="flow" data-theme="b">はい</a>
+                        <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">いいえ</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
